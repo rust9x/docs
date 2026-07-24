@@ -1,0 +1,7 @@
+{
+  "markdownlint.config": {
+    "MD033": false
+  },
+  "rewrap.autoWrap.enabled": true,
+  "rewrap.wrappingColumn": 100
+}
