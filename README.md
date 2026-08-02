@@ -5,7 +5,7 @@ _Blazingly fast! Y2k compliant! Works everywhere!_
 
 ---
 
-rust9x brings the Rust standard library to legacy Windows versions (9x, Me, NT3.1 SP3+). Note that
+rust9x brings the Rust standard library to legacy Windows versions (9x, Me, NT3.1 SP2+). Note that
 this only includes these systems as _target_.
 
 [rust9x-sample: Sample application](https://github.com/rust9x/rust9x-sample)
