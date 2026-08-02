@@ -55,20 +55,32 @@ being: [Github Issue](https://github.com/rust-lang/rust/issues/150280#issuecomme
 
 [Building with rust9x](building-with-r9x.md)
 
-## rust9x-sample in action (rust9x-1.61.0-beta)
+## `rust9x-sample` in action (various versoins)
 
-All these run _the same_ binary (except NT3.51). The non-network binary runs on all of them, of
-course.
+### Windows 95 RTM with WinSock2 update (VM)
 
-### Windows NT Workstation 3.51 (VM, with `network` feature disabled as there is no WinSock2 available)
+<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/e3aa48c3-9b50-427f-81b5-493cc0a76542" />
 
-[<img width="640" alt="win351"
-src="https://user-images.githubusercontent.com/5844066/164351469-86433cda-6fc0-4e7b-b75e-b42cd727935d.png">](https://user-images.githubusercontent.com/5844066/164351469-86433cda-6fc0-4e7b-b75e-b42cd727935d.png)
-
-### Windows 95 B (real hardware, my Pentium MMX 233MHz machine <3)
+### Windows 95 B (real hardware, my Pentium MMX 233MHz machine)
 
 [<img width="640" alt="win95"
 src="https://user-images.githubusercontent.com/5844066/164351479-ac7bf75d-d6fe-4897-8be0-bab726c24906.png">](https://user-images.githubusercontent.com/5844066/164351479-ac7bf75d-d6fe-4897-8be0-bab726c24906.png)
+
+### Windows NT Workstation 3.1 SP3 (VM) (with [r9xrsrt](https://github.com/rust9x/r9xrsrt) only)
+
+<img width="800" height="600" alt="rust9x on WinNT 3.1 SP3" src="https://github.com/user-attachments/assets/72d60543-74de-4183-a541-15b2825a19ab" />
+
+### Windows NT Workstation 3.5 (VM)
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/3198700a-cc0a-4435-8d4b-d304d543ea9c" />
+
+### Windows NT Workstation 3.51 (VM)
+
+<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/435e0843-8e04-4dbf-bcb5-1b9bb84c87b0" />
+
+### Windows NT Workstation 4.0 RTM/SP0 (VM)
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/c6a47771-d562-424e-a872-e4cb4d4ea106" />
 
 ### Windows XP SP3 (real hardware)
 
@@ -79,3 +91,8 @@ src="https://user-images.githubusercontent.com/5844066/164351581-61f0cea0-ba94-4
 
 [<img width="640" alt="win11"
 src="https://user-images.githubusercontent.com/5844066/164351670-3d13e58c-fde6-40e8-b5fb-22a6aabb9f86.png">](https://user-images.githubusercontent.com/5844066/164351670-3d13e58c-fde6-40e8-b5fb-22a6aabb9f86.png)
+
+### Linux via wine
+
+<img width="1626" height="1802" alt="image" src="https://github.com/user-attachments/assets/23ac2ead-595f-4e06-b8dd-3dc936d3ca5f" />
+
