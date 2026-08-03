@@ -5,7 +5,7 @@
 Have a look at the [sample application](https://github.com/rust9x/rust9x-sample) for an example of
 how to set up a build environment for rust9x.
 
-### Window Platform SDK
+### Windows (Platform) SDK
 
 The only parts required from the Platform SDK are the import libraries (and potentially headers for
 C deps).
@@ -13,14 +13,15 @@ C deps).
 For the rust9x standard library, basically any version of the Platform SDK will work, as only APIs
 available in all Windows versions are directly linked.
 
-The only exception is WinSock 2, which is used for networking. `ws2_32.lib` is not included in old
-versions.
+The two exceptions are: WinSock 2, which is required for networking, and `unicows.lib` (see below).
+
+The last version of the Platform SDK that fully supports Windows 95 is 5.2 Build 3790 (Server 2003).
 
 Tested versions:
 
 Version | Path | Notes
 ------- | ---- | -------------------------
-VC6 integrated | `VC98/Lib` | does not include `ws2_32.lib`, need to additionally link that from another version
+VC6 integrated | `VC98/Lib` | does not include `ws2_32.lib` or `unicows.lib`, need to additionally link that from another version
 VC7.1 (2003) integrated | `Vc7/PlatformSDK/Lib` | works
 VC8 (2005) integrated | `VC/PlatformSDK/Lib` | works
 Platform SDK 5.2 3790 (Server 2003) | `Lib` | works
