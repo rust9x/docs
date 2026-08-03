@@ -108,12 +108,3 @@ higher.
 
 If _that_ one isn't available, a pretty simple PRNG (`xoroshiro64**`) is used instead, seeded with a
 stack address and `GetTickCount`.
-
-## Other crates
-
-### windows-rs, windows-sys, windows-link
-
-If you don't need `unicows` support, any recent release of windows-rs should work.
-
-For 9x/Me support, if you want to access any unicows-wrapped API, you will need a patched
-`windows-link` crate, switching it from `raw-dylib` to regular linking.

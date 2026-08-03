@@ -2,6 +2,9 @@
 
 ## Build requirements
 
+Have a look at the [sample application](https://github.com/rust9x/rust9x-sample) for an example of
+how to set up a build environment for rust9x.
+
 ### Window Platform SDK
 
 The only parts required from the Platform SDK are the import libraries (and potentially headers for
@@ -48,7 +51,10 @@ VC 2017 XP toolset | no* | yes | XP+ | yes | `BuildTools/VC/Tools/MSVC/14.16.270
 When linking dynamically, you of course have to make sure the target system has the appropriate
 version of the runtime redistributable installed.
 
-### Microsoft Layer for Unicode on Windows 95, 98, and Me Systems (aka MSLU, unicows)
+### Microsoft Layer for Unicode (aka MSLU, unicows)
+
+If you don't want to target Windows 9x/Me, pass `-Zunicows=no` as a rustc flag to disable the MSLU
+support.
 
 If you like to target Windows 9x/Me, you will also need to link against the Microsoft Layer for
 Unicode (MSLU), also known by its library name `unicows` 🐄.
@@ -56,40 +62,12 @@ Unicode (MSLU), also known by its library name `unicows` 🐄.
 The latest version of `unicows.lib` that fully supports Windows 95 is provided with the Windows
 Platform SDK 5.2 Build 3790 (Server 2003).
 
-Unicows works by injecting its static library before other libraries in the linker search logic. See
-the Platform SDK documentation for guidance, and the link arg configuration in
-[rust9x-sample][r9x-sample-config-toml] for an example.
+Unicows works by injecting its static library before other libraries in the linker search logic.
+rust9x automatically injects `unicows.lib` in the right places for any Rust usage.
+
+See the link arg configuration in [rust9x-sample][r9x-sample-config-toml] for an example.
 
 [r9x-sample-config-toml]: https://github.com/rust9x/rust9x-sample/blob/main/.cargo/config.toml
-
-Note that generated `raw-dylib` link dependencies are automatically injected by rust before the
-`unicows` library, so it is [currently][raw-dylib-support] not supported to use `raw-dylib` with
-rust9x.
-
-[raw-dylib-support]: https://github.com/rust9x/rust/issues/15
-
-Rust9x automatically skips emitting the following library requirements when linking:
-
-```plain
-kernel32
-advapi32
-user32
-gdi32
-shell32
-comdlg32
-version
-mpr
-rasapi32
-winmm
-winspool
-vfw32
-secur32
-oleacc
-oledlg
-sensapi
-```
-
-You'll have to emit the required ones yourself, after `unicows.lib`, if you need them.
 
 ## Runtime requirements
 
