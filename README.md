@@ -15,6 +15,27 @@ Depending on how far back you'd like to go, there are lots of **[limitations]** 
 Please note that this is not stable software at all, and does not claim to ever be. _Only_ the
 standard library is ported. Crates that directly use Windows APIs _will_ need to be patched.
 
+## Precompiled toolchain
+
+Starting from `rust9x-1.98.0-beta-v4`, you can download precompiled toolchains from the [releases
+page](https://github.com/rust9x/rust9x/releases).
+
+Just download the file for your platform, extract it, and link it via `rustup`:
+
+```shell
+rustup toolchain link rust9x /path/to/extracted/rust9x
+```
+
+The folder to specify is the one that contains `bin`, `lib`, etc. Uninstall via `rustup toolchain
+remove rust9x`.
+
+Afterwards, you can use `+rust9x` after a tool name (e.g. `cargo +rust9x build`) to use the new
+toolchain, or you can run `rustup override set rust9x` in a project folder to set it as default in
+that folder.
+
+For Linux, additionally see how to [build on Linux with MSVC targets](linux-msvc.md)
+for how to set up the build environment.
+
 ## Compiling rust9x yourself
 
 [How to build and run the compiler][rustc-dev-guide]
