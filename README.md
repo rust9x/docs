@@ -18,7 +18,7 @@ standard library is ported. Crates that directly use Windows APIs _will_ need to
 ## Precompiled toolchain
 
 Starting from `rust9x-1.98.0-beta-v4`, you can download precompiled toolchains from the [releases
-page](https://github.com/rust9x/rust9x/releases).
+page](https://github.com/rust9x/rust/releases).
 
 Just download the file for your platform, extract it, and link it via `rustup`:
 
