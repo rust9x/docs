@@ -44,8 +44,10 @@ for how to set up the build environment.
 
 [rustc-dev-guide]: https://rustc-dev-guide.rust-lang.org/building/how-to-build-and-run.html
 
-NOTE: There currently is a bug with the VS 2026 toolchain. Make sure to use VS 2022 for the time
-being: [Github Issue](https://github.com/rust-lang/rust/issues/150280#issuecomment-3695099864)
+> [!NOTE]
+>
+> You'll need VS2026's build tools if you keep `download-llvm = true` in the bootstrap config. If
+> you want to build with VS2022, set `download-llvm = false`, which will then recompile it.
 
 1. Clone this repo and make sure that your preferred version's branch is checked out.
 2. Copy `bootstrap.rust9x.toml` to `bootstrap.toml`, edit to suit your needs. Or, if you just want
