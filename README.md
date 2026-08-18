@@ -84,10 +84,9 @@ for how to set up the build environment.
 
 <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/e3aa48c3-9b50-427f-81b5-493cc0a76542" />
 
-### Windows 95 B (real hardware, my Pentium MMX 233MHz machine)
+### Windows 95 B (real hardware, i486 target)
 
-[<img width="640" alt="win95"
-src="https://user-images.githubusercontent.com/5844066/164351479-ac7bf75d-d6fe-4897-8be0-bab726c24906.png">](https://user-images.githubusercontent.com/5844066/164351479-ac7bf75d-d6fe-4897-8be0-bab726c24906.png)
+<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/3ef54888-9826-46e9-b200-483979b2b29b" />
 
 ### Windows NT Workstation 3.1 SP3 (VM) (with [r9xrsrt](https://github.com/rust9x/r9xrsrt) only)
 
